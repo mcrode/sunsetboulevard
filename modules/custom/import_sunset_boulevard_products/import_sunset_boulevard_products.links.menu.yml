@@ -1,0 +1,6 @@
+hello_world.admin:
+  title: 'Import products from API'
+  description: 'example of how to make an admin settings page link'
+  parent: system.admin_config_services
+  route_name: import_sunset_boulevard_products.import_products_form
+  weight: 200

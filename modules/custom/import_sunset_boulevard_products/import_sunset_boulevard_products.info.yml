@@ -1,0 +1,5 @@
+name: 'Import Sunset Boulevard Products'
+type: module
+description: 'Imports products from API'
+core: 8.x
+package: 'Custom'

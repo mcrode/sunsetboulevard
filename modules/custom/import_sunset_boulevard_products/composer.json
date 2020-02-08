@@ -1,0 +1,13 @@
+{
+    "name": "import_sunset_boulevard_products",
+    "type": "drupal-module",
+    "description": "Imports products from API",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/import_sunset_boulevard_products",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/import_sunset_boulevard_products",
+        "source": "http://cgit.drupalcode.org/import_sunset_boulevard_products",
+    },
+}

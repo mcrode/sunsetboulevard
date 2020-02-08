@@ -1,0 +1,9 @@
+import_sunset_boulevard_products.import_products_form:  
+  path: '/admin/sunset-boulevard/import-products'  
+  defaults:  
+    _form: '\Drupal\import_sunset_boulevard_products\Form\ImportSunsetProductsForm'  
+    _title: 'Import products'  
+  requirements:  
+    _permission: 'access administration pages'  
+  options:  
+    _admin_route: TRUE  

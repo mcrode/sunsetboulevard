@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains import_sunset_boulevard_products.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function import_sunset_boulevard_products_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the import_sunset_boulevard_products module.
+    case 'help.page.import_sunset_boulevard_products':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Imports products from API') . '</p>';
+      return $output;
+
+    default:
+  }
+}
