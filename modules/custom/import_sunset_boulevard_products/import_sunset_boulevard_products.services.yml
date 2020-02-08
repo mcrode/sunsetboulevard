@@ -1,0 +1,6 @@
+services:
+  import_sunset_boulevard_products.event_subscriber:
+    class: Drupal\import_sunset_boulevard_products\EventSubscriber\CartEventSubscriber
+    arguments: ['@messenger', '@commerce_cart.cart_manager']
+    tags:
+      - { name: event_subscriber }
