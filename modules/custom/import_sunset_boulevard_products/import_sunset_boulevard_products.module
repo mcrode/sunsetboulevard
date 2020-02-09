@@ -34,10 +34,11 @@ function import_sunset_boulevard_products_form_alter(&$form, &$form_state, $form
     case 'views_form_commerce_cart_form_default_1':
     case 'commerce_checkout_flow_multistep_default':
 
+      print_r($form['edit-quantity-0']);
       $current_time = intval( date('Hm') );
 
       if( $current_time > 2200 || $current_time < 930 ) {
-        
+
         $closing_text = 'The store opens again at 09:30am';
 
         $form['actions']['checkout']['#disabled'] = true;
