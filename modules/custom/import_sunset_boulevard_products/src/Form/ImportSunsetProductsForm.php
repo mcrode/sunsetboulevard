@@ -99,7 +99,7 @@ class ImportSunsetProductsForm extends FormBase {
       else {
 
         $file = File::create([
-          'uri' => $product->image_url,
+          'uri' => system_retrieve_file( $product->image_url ),
         ]);
         $file->save();
 

@@ -52,7 +52,7 @@ class CartEventSubscriber implements EventSubscriberInterface {
   }
 
   /**
-   * Add a related product automatically
+   * Increase Added to cart field
    *
    * @param \Drupal\commerce_cart\Event\CartEntityAddEvent $event
    *   The cart add event.
@@ -60,7 +60,7 @@ class CartEventSubscriber implements EventSubscriberInterface {
    * @throws \Drupal\Core\TypedData\Exception\ReadOnlyException
    */
   public function addToCart(CartEntityAddEvent $event) {
-    /** @var \Drupal\commerce_product\Entity\ProductVariationInterface $product_variation */
+
     $product_id = $event->getEntity()->getProductId();
     $product = Product::load( $product_id );
     $added_to_cart = $product->get('field_added_to_cart')->getValue()[0]['value'] + 1;
@@ -69,12 +69,12 @@ class CartEventSubscriber implements EventSubscriberInterface {
     
   }
 
-  public function updateQty(CartEntityAddEvent $event) {
-      //Update based on qty
-  }
+//   public function updateQty(CartEntityAddEvent $event) {
+//       //Update based on qty
+//   }
 
-  public function removeOrderItem(CartEntityAddEvent $event) {
-      //Update based on qty
-  }
+//   public function removeOrderItem(CartEntityAddEvent $event) {
+//       //Update based on qty
+//   }
 
 }
