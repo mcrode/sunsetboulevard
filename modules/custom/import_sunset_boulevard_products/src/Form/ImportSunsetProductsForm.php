@@ -18,13 +18,11 @@ use Drupal\file\Entity\File;
 
 class ImportSunsetProductsForm extends FormBase {
 
-  public function getFormId() 
-  {
+  public function getFormId() {
     return 'sunset_bouledvard_import_products_form'; 
   }
 
-  public function buildForm( array $form, FormStateInterface $form_state ) 
-  {
+  public function buildForm( array $form, FormStateInterface $form_state ) {
 
     $last_import_timestamp = \Drupal::database()->query("SELECT data FROM {config} WHERE name = 'sunset_last_import'")->fetch()->data;
 
